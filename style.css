@@ -54,7 +54,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid red 1px 
+}
+
+.panel > *:first-child {
+  transform: translateY(-100%)
+}
+
+.panel.open-active > *:first-child { transform: translateY(0) }
+
+.panel > *:last-child {
+  transform: translateY(100%)
+}
+
+.panel.open-active > *:last-child {
+  transform: translateY(0)
 }
 
 .panel p {
@@ -68,6 +81,7 @@ body {
   font-size: 4em;
 }
 
-.panel .open {
+.panel.open {
   font-size: 40px;
+  flex: 5;
 }
