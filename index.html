@@ -6,6 +6,7 @@
   <title>Flex Panels</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <script src="./main.js" charset="utf-8" defer></script>
 </head>
 <body>
   <div class='panels'>
@@ -35,22 +36,5 @@
       <p>Motion</p>
     </div>
   </div>
-
-  <script>
-      const panels = document.querySelectorAll('.panel')
-  
-      function toggleOpen() {
-        this.classList.toggle('open')
-      }
-
-      function toggleActive(e) {
-        if(e.propertyName.includes('flex')) {
-          this.classList.toggle('open-active')
-        }
-      }
-
-      panels.forEach(panel => panel.addEventListener('click', toggleOpen))
-      panels.forEach(panel => panel.addEventListener('transitionend', toggleActive))
-    </script>
 </body>
 </html>
